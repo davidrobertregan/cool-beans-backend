@@ -1,12 +1,12 @@
 puts "Start seeding!"
 puts "Seeding roasters..."
 5.times do
-    Roaster.create(name: Faker::Mountain.name, location: Faker::Fantasy::Tolkien.location, image: Faker::LoremFlickr.image)
+    Roaster.create(name: Faker::Mountain.name, location: Faker::Fantasy::Tolkien.location, image: Faker::Avatar.image)
 end
 
 puts "Seeding coffees..."
 20.times do
-    Coffee.create(name: Faker::Coffee.blend_name, roast: ["light", "medium", "dark"].sample, image: Faker::LoremFlickr.image, roaster: Roaster.all.sample)
+    Coffee.create(name: Faker::Coffee.blend_name, roast: ["light", "medium", "dark"].sample, image: Faker::Avatar.image, roaster: Roaster.all.sample)
 end
 
 puts "Seeding drinkers..."

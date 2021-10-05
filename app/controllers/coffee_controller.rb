@@ -5,4 +5,5 @@ class CoffeeController < ApplicationController
     get "/coffees" do
         Coffee.all.to_json(include: [:roaster, { reviews: { include: :drinker } }])
     end
+
   end

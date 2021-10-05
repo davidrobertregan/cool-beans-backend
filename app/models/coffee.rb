@@ -8,7 +8,7 @@ class Coffee < ActiveRecord::Base
     end    
 
     def print_all_reviews
-        reviews.each {|review| puts "Review for #{name} for #{review.drinker.name}: #{review.rating}. #{review.content}"}
+        reviews.each{|review| puts "Review for #{name} for #{review.drinker.name}: #{review.rating}. #{review.content}"}
     end
 
 end

@@ -13,4 +13,12 @@ class CoffeeController < ApplicationController
     get "/coffees/:id/average_rating" do
         Coffee.find(params[:id]).average_rating.to_json
     end
+
+    get "/coffees/:id/reviews" do
+        Coffee.find(params[:id]).print_all_reviews.to_json(include: :drinker)
+    end
+
+    get "/coffees/:id/roaster" do
+        Coffee.find(params[:id]).roaster.to_json
+    end
 end

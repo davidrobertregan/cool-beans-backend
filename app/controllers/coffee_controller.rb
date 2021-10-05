@@ -6,6 +6,10 @@ class CoffeeController < ApplicationController
         Coffee.all.to_json(include: [:roaster, { reviews: { include: :drinker } }])
     end
 
+    get "/coffees/:id" do
+        Coffee.find(params[:id]).to_json(include: [:roaster, { reviews: { include: :drinker } }])
+    end
+
     get "/coffees/:id/average_rating" do
         Coffee.find(params[:id]).average_rating.to_json
     end

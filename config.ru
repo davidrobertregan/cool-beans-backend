@@ -15,3 +15,4 @@ use Rack::JSONBodyParser
 run ApplicationController
 use CoffeeController
 use RoasterController
+use ReviewController

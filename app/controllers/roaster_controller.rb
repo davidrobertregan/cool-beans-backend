@@ -4,4 +4,8 @@ class RoasterController < ApplicationController
     get "/roasters" do
         Roaster.all.to_json
     end
+
+    get "/roasters/:id" do
+        Roaster.find(params[:id]).to_json
+    end
 end

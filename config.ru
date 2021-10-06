@@ -16,3 +16,4 @@ run ApplicationController
 use CoffeeController
 use RoasterController
 use ReviewController
+use DrinkerController

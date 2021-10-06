@@ -15,7 +15,7 @@ class CoffeeController < ApplicationController
     end
 
     get "/coffees/:id/reviews" do
-        Coffee.find(params[:id]).print_all_reviews.to_json(include: :drinker)
+        Coffee.find(params[:id]).reviews.all.to_json(include: :drinker)
     end
 
     get "/coffees/:id/roaster" do

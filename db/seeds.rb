@@ -9,8 +9,8 @@ puts "Start seeding!"
 puts "Seeding roasters..."
 
 madcap = Roaster.create(name: "Madcap Coffee", location: "Grand Rapids, MI", url: "https://madcapcoffee.com/", image: "https://madcapcoffee.com/wp-content/uploads/2017/09/MadcapShare-Web-logo.png")
-stumpdown = Roaster.create(name: "Stumptown Coffee Roasters", location: "Portland, OR", url: 'https://www.stumptowncoffee.com/', image: "https://images.squarespace-cdn.com/content/v1/5055e59ce4b02b42cb30023c/1444311166322-0O8B8EXEF8I9CGH5873W/image-asset.png")
-counter = Roaster.create(name: "Counter Culture", location: "Durham, NC", url: "https://counterculturecoffee.com/" image: "https://www.rainforest-alliance.org/wp-content/uploads/2021/07/counter-culture.png")
+stumptown = Roaster.create(name: "Stumptown Coffee Roasters", location: "Portland, OR", url: 'https://www.stumptowncoffee.com/', image: "https://images.squarespace-cdn.com/content/v1/5055e59ce4b02b42cb30023c/1444311166322-0O8B8EXEF8I9CGH5873W/image-asset.png")
+counter = Roaster.create(name: "Counter Culture", location: "Durham, NC", url: "https://counterculturecoffee.com/", image: "https://www.rainforest-alliance.org/wp-content/uploads/2021/07/counter-culture.png")
 
 
 puts "Seeding coffees..."
@@ -31,7 +31,11 @@ Coffee.create(name: "Yenni Reinoso", roast: "Limited Reserve", image: "https://m
 
 #stumptown
 
-
+Coffee.create(name: "Hair Bender", roast: "Dark", image: "http://cdn.shopify.com/s/files/1/0495/9446/6472/products/STCShopifyHairbender_ProductImageTransparentPNG.png?v=1622754826", roaster: stumptown)
+Coffee.create(name: "Holler Mountain", roast: "Medium", image: "http://cdn.shopify.com/s/files/1/0495/9446/6472/products/STCShopifyHollerMountain_ProductImageTransparentPNG.png?v=1622754924", roaster: stumptown)
+Coffee.create(name: "Guatemala El Injerto Bourbon", roast: "Medium", image: "http://cdn.shopify.com/s/files/1/0495/9446/6472/products/STC-Shopify-Guatemala-El-Injerto_Product-Image-Transparent-PNG_EDIT.png?v=1622754807", roaster: stumptown)
+Coffee.create(name: "Ethiopia Mordecofe", roast: "Light", image: "https://cdn.shopify.com/s/files/1/0495/9446/6472/products/STC-Shopify-PDP-PNG_mordecofe_large.png?v=1624904030", roaster: stumptown)
+Coffee.create(name: "Costa Rica Montes De Oro", roast: "Light", image: "https://cdn.shopify.com/s/files/1/0495/9446/6472/products/STC-Shopify-Costa-Rica-Montes-De-Oro2021_Product-Image-Transparent-PNG_large.png?v=1630874843", roaster: stumptown)
 
 
 

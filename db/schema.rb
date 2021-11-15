@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_10_06_134452) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "coffees", force: :cascade do |t|
     t.string "name"
     t.string "roast"
     t.string "image"
-    t.integer "roaster_id"
+    t.bigint "roaster_id"
     t.index ["roaster_id"], name: "index_coffees_on_roaster_id"
   end
 
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 2021_10_06_134452) do
   create_table "reviews", force: :cascade do |t|
     t.string "content"
     t.integer "rating"
-    t.integer "coffee_id"
-    t.integer "drinker_id"
+    t.bigint "coffee_id"
+    t.bigint "drinker_id"
     t.index ["coffee_id"], name: "index_reviews_on_coffee_id"
     t.index ["drinker_id"], name: "index_reviews_on_drinker_id"
   end

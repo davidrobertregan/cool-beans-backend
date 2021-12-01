@@ -16,7 +16,7 @@ class ReviewController < ApplicationController
     patch "/reviews/:id" do
         review = Review.find(params[:id])
         review.update(params)
-        review.to_json
+        review.to_json(include: :drinker)
     end
 end
 

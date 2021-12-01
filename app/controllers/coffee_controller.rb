@@ -22,5 +22,3 @@ class CoffeeController < ApplicationController
         Coffee.find(params[:id]).roaster.to_json
     end
 end
-
-# test

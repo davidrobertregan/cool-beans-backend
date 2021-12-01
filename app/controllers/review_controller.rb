@@ -10,7 +10,7 @@ class ReviewController < ApplicationController
     end
 
     post "/reviews" do
-        Review.create(params).to_json
+        Review.create(params).to_json(include: :drinker)
     end
 
     patch "/reviews/:id" do
